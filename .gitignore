@@ -1,0 +1,21 @@
+# misc
+.DS_Store
+
+# Docs - Not Ready
+docs/StartUp.md
+
+# Docker Services & Volumes - Add Services to REPO
+# dockhand
+dockhand/data/*
+# dozzle
+dozzle/data/*
+# it-tools
+it-tools/data/*
+# portainer
+portainer/data/*
+# uptime-kuma
+uptime-kuma/data/*
+
+# Docker Secrets
+secrets/*
+

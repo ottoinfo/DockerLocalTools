@@ -1,0 +1,22 @@
+# Usage
+#   Start:          docker compose up
+#   Stop:           docker compose down
+#   Destroy:        docker compose down -v
+
+include:
+  # # ADDITIONAL
+  - path: ./dockhand/docker-compose.yaml
+  - path: ./dozzle/docker-compose.yaml
+  - path: ./it-tools/docker-compose.yaml
+  - path: ./portainer/docker-compose.yaml
+  - path: ./uptime-kuma/docker-compose.yaml
+
+# Create/Setup Networks
+networks:
+  # If no other networks are defined on the service, it will be in "default" network by default
+  local-services:
+    name: ${NETWORK_NAME}
+    driver: ${NETWORK_DRIVER}
+    ipam:
+      config:
+        - subnet: ${NETWORK_SUBNET}
